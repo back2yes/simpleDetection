@@ -69,3 +69,44 @@ def nms(boxes, scores, overlap=0.5, top_k=200):
         # keep only elements with an IoU <= overlap
         idx = idx[IoU.le(overlap)]
     return keep, count
+
+
+def chamferDist(x, y):
+    """
+    new version when the lengths of x and y do not agree
+
+    Author: Joey Guo
+
+    input: x, of size (batchsize, num_of_points_x, dimensions)
+    input: y, of size (batchsize, num_of_points_y, dimensions)
+    return: the approx. avg emd
+
+    Example::
+        x_npy = np.array([0.0, 1, 2])[None, :, None]
+        y_npy = np.array([0.0, 1, 2, 3, 4])[None, :, None]
+        # x = torch.randn(32, 1000, 1).cuda()
+        # y = torch.randn(32, 1000, 1).cuda()
+        x = torch.from_numpy(x_npy)
+        y = torch.from_numpy(y_npy)
+        print(batch_NN_loss(x, y))  # 0.3
+    """
+
+    bs, num_points_x, points_dim = x.size()
+    bs, num_points_y, points_dim = y.size()
+    xx = x.unsqueeze(2).expand(bs, num_points_x, num_points_y,
+                               points_dim)  # x coord is fixed on dim 2 (start from 0)
+    yy = y.unsqueeze(1).expand(bs, num_points_x, num_points_y,
+                               points_dim)  # y coord is fixed on dim 1 (start from 0)
+
+    D = xx - yy
+    D = torch.sqrt(torch.sum(D * D, dim=-1))  # sum over space dimension
+
+    # fix x to search on ys, so this is the min dist from each point in x to the set of y
+    min_dist1, _ = torch.min(D, dim=2)
+    # fix y to search on xs, so this is the min dist from each point in y to the set of x
+    min_dist2, _ = torch.min(D, dim=1)
+
+    # actually it is only approx. avg_emd, or the Chamfer distance
+    chamfer = 0.5 * (min_dist1.mean() + min_dist2.mean())
+    # chamfer = (min_dist1.sum() + min_dist2.sum()) / (bs * (num_points_x + num_points_y))
+    return chamfer
