@@ -8,7 +8,7 @@ from torch.autograd import Variable
 
 print(torch.__version__)
 
-ds = FakeData(image_size=(3, 512, 512), transform=transforms.ToTensor())
+ds = FakeData(image_size=(3, 300, 300), transform=transforms.ToTensor())
 dl = DataLoader(ds, batch_size=16)
 
 net = NNSkeleton(resnet34(True))

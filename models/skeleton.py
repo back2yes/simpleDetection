@@ -2,10 +2,12 @@ from models.resnet import FPN
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.autograd import Variable
+import torch
+from util.box_utils import to_var
 
 
 class Heads(nn.Module):
-    def __init__(self, in_channels, out_channels, final_activation=F.relu):
+    def __init__(self, in_channels, out_channels, final_activation=F.sigmoid):
         super(Heads, self).__init__()
         self.final_activation = final_activation
         self.conv1 = nn.Sequential(
@@ -69,9 +71,29 @@ class NNSkeleton(nn.Module):
         #     locPreds_1, clsPreds_1, locPreds0, clsPreds0, locPreds1, clsPreds1, locPreds2, clsPreds2, locPreds3,
         #     clsPreds3,
         #     locPreds4, clsPreds4, locPreds5, clsPreds5)
+        # locPreds3.squeeze()
+        # clsPreds3.squeeze()
+        featHeight, featWidth = locPreds3.size()[-2:]
+        imgHeight, imgWidth = x.size()[-2:]
+        xgrid = torch.linspace(0.0, imgWidth - 1.0, featWidth).unsqueeze(0).expand((featHeight, featWidth))
+        ygrid = torch.linspace(0.0, imgHeight - 1.0, featHeight).unsqueeze(1).expand((featHeight, featWidth))
+        xgrid, ygrid = to_var(xgrid).detach(), to_var(ygrid).detach()
+        # print(xgrid)
+        # print(ygrid)
 
-        retVals = (locPreds3, clsPreds3)
+        # xPreds = locPreds3
+        # print('xgrid, ', xgrid.size(), 'locPreds, ', locPreds3.size())
+        xmin = xgrid - 0.5 * imgWidth * locPreds3.squeeze()
+        ymin = ygrid - 0.5 * imgHeight * locPreds3.squeeze()
+        xmax = xgrid + 0.5 * imgWidth * locPreds3.squeeze()
+        ymax = ygrid + 0.5 * imgHeight * locPreds3.squeeze()
 
-        for val in retVals:
-            print(val.size())
+        bboxes = torch.stack([xmin, ymin, xmax, ymax], dim=-1).view(-1, 4)
+        scores = clsPreds3.view(-1)
+        retVals = (bboxes, scores)
+
+        # retVals = (xgrid, ygrid, locPreds3, clsPreds3)
+
+        # for val in retVals:
+        #     print(val.size())
         return retVals

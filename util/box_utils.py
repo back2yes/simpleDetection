@@ -1,5 +1,5 @@
 import torch
-
+from torch.autograd import Variable
 
 # Original author: Francisco Massa:
 # https://github.com/fmassa/object-detection.torch
@@ -63,23 +63,28 @@ def nms(boxes, scores, overlap=0.5, top_k=200):
         h = torch.clamp(h, min=0.0)
         inter = w * h
         # IoU = i / (area(a) + area(b) - i)
-        rem_areas = torch.index_select(area, 0, idx)  # load remaining areas)
-        union = (rem_areas - inter) + area[i]
+        remaining_areas = torch.index_select(area, 0, idx)  # load remaining areas)
+        union = (remaining_areas - inter) + area[i]
         IoU = inter / union  # store result in iou
         # keep only elements with an IoU <= overlap
         idx = idx[IoU.le(overlap)]
     return keep, count
 
 
+def to_var(x, is_cuda=True):
+    return Variable(x) if not is_cuda else Variable(x).cuda()
+
+# by Joey Guo
 def chamferDist(x, y):
-    """
-    new version when the lengths of x and y do not agree
+    """new version when the lengths of x and y do not agree
 
-    Author: Joey Guo
+    Args::
+        input: x, of size (batchsize, num_of_points_x, dimensions)
+        input: y, of size (batchsize, num_of_points_y, dimensions)
+        return: the approx. avg emd
 
-    input: x, of size (batchsize, num_of_points_x, dimensions)
-    input: y, of size (batchsize, num_of_points_y, dimensions)
-    return: the approx. avg emd
+    Returns::
+        The Chamfer distance between two sets.
 
     Example::
         x_npy = np.array([0.0, 1, 2])[None, :, None]
