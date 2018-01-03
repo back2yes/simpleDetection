@@ -50,27 +50,27 @@ class NNSkeleton(nn.Module):
     def forward(self, x):
         # blah
         h_1, h0, h1, h2, h3, h4, h5 = self.fpn(x)
-        locPreds_1 = self.locHead_1(h_1)  # 224x224
-        clsPreds_1 = self.clsHead_1(h_1)  # 224x224
-        locPreds0 = self.locHead0(h0)  # 112x112
-        clsPreds0 = self.clsHead0(h0)  # 112x112
-        locPreds1 = self.locHead1(h1)  # 56x56
-        clsPreds1 = self.clsHead1(h1)  # 56x56
-        locPreds2 = self.locHead2(h2)  # 56x56
-        clsPreds2 = self.clsHead2(h2)  # 56x56
+        # locPreds_1 = self.locHead_1(h_1)  # 224x224
+        # clsPreds_1 = self.clsHead_1(h_1)  # 224x224
+        # locPreds0 = self.locHead0(h0)  # 112x112
+        # clsPreds0 = self.clsHead0(h0)  # 112x112
+        # locPreds1 = self.locHead1(h1)  # 56x56
+        # clsPreds1 = self.clsHead1(h1)  # 56x56
+        # locPreds2 = self.locHead2(h2)  # 56x56
+        # clsPreds2 = self.clsHead2(h2)  # 56x56
         locPreds3 = self.locHead3(h3)  # 28x28
         clsPreds3 = self.clsHead3(h3)  # 28x28
-        locPreds4 = self.locHead4(h4)  # 14x14
-        clsPreds4 = self.clsHead4(h4)  # 14x14
-        locPreds5 = self.locHead5(h5)  # 7x7
-        clsPreds5 = self.clsHead5(h5)  # 7x7
+        # locPreds4 = self.locHead4(h4)  # 14x14
+        # clsPreds4 = self.clsHead4(h4)  # 14x14
+        # locPreds5 = self.locHead5(h5)  # 7x7
+        # clsPreds5 = self.clsHead5(h5)  # 7x7
 
-        retVals = (
-            locPreds_1, clsPreds_1, locPreds0, clsPreds0, locPreds1, clsPreds1, locPreds2, clsPreds2, locPreds3,
-            clsPreds3,
-            locPreds4, clsPreds4, locPreds5, clsPreds5)
+        # retVals = (
+        #     locPreds_1, clsPreds_1, locPreds0, clsPreds0, locPreds1, clsPreds1, locPreds2, clsPreds2, locPreds3,
+        #     clsPreds3,
+        #     locPreds4, clsPreds4, locPreds5, clsPreds5)
 
-        # retVals = (locPreds1, clsPreds1)
+        retVals = (locPreds3, clsPreds3)
 
         for val in retVals:
             print(val.size())
