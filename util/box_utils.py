@@ -164,9 +164,10 @@ def draw_boxes(img, bboxes, scores, ax=None, save_path='outputs/00001.png'):
 
     for ii, bbox in enumerate(bboxes.squeeze().data.cpu().numpy()):
         score = scores.squeeze().data.cpu().numpy()[ii]
+        # print(score)
         rectangle = mpatch.Rectangle(bbox[:2], bbox[2] - bbox[0], bbox[3] - bbox[1], fill=False,
-                                     )
+                                     color=(score, 0.5, (1 - score), 0.7))
         ax.add_patch(rectangle)
-    plt.xlim(0.0, 10.0)
-    plt.ylim(0.0, 10.0)
+    # plt.xlim(0.0, 10.0)
+    # plt.ylim(0.0, 10.0)
     plt.savefig(save_path)

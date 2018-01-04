@@ -14,7 +14,8 @@ from torch import nn
 """ Parameters here
 """
 is_cuda = True
-dataroot = 'C:/Users/x/data/VOCdevkit'
+# dataroot = 'C:/Users/x/data/VOCdevkit'
+dataroot = '/home/x/data/VOCdevkit'
 num_epochs = 100
 lam = 0.01
 lr = 1e-4
@@ -104,5 +105,5 @@ for epoch in range(start_epoch, num_epochs):
         # print(kept_bboxes.size())
         # bboxes
 
-        if global_step % 20 == 0:
-            draw_boxes(xs, bboxes, kept_scores, save_path='outputs/{:06d}.png'.format(global_step))
+        if global_step % 100 == 0:
+            draw_boxes(xs, kept_bboxes, kept_scores, save_path='outputs/{:06d}.png'.format(global_step))
