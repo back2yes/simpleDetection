@@ -14,6 +14,7 @@ from torch import nn
 """ Parameters here
 """
 is_cuda = True
+
 # dataroot = 'C:/Users/x/data/VOCdevkit'
 dataroot = '/home/x/data/VOCdevkit'
 num_epochs = 100
