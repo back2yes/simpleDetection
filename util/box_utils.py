@@ -1,5 +1,7 @@
 import torch
 from torch.autograd import Variable
+import torch.nn as nn
+
 
 # Original author: Francisco Massa:
 # https://github.com/fmassa/object-detection.torch
@@ -74,6 +76,7 @@ def nms(boxes, scores, overlap=0.5, top_k=200):
 def to_var(x, is_cuda=True):
     return Variable(x) if not is_cuda else Variable(x).cuda()
 
+
 # by Joey Guo
 def chamferDist(x, y):
     """new version when the lengths of x and y do not agree
@@ -95,7 +98,8 @@ def chamferDist(x, y):
         y = torch.from_numpy(y_npy)
         print(batch_NN_loss(x, y))  # 0.3
     """
-
+    # print(x.size())
+    # print(y.size())
     bs, num_points_x, points_dim = x.size()
     bs, num_points_y, points_dim = y.size()
     xx = x.unsqueeze(2).expand(bs, num_points_x, num_points_y,
@@ -107,11 +111,42 @@ def chamferDist(x, y):
     D = torch.sqrt(torch.sum(D * D, dim=-1))  # sum over space dimension
 
     # fix x to search on ys, so this is the min dist from each point in x to the set of y
-    min_dist1, _ = torch.min(D, dim=2)
+    min_dist1, min_indexes = torch.min(D, dim=2)
+    # min_dist1, _ = torch.min(D, dim=2)
     # fix y to search on xs, so this is the min dist from each point in y to the set of x
     min_dist2, _ = torch.min(D, dim=1)
 
     # actually it is only approx. avg_emd, or the Chamfer distance
     chamfer = 0.5 * (min_dist1.mean() + min_dist2.mean())
     # chamfer = (min_dist1.sum() + min_dist2.sum()) / (bs * (num_points_x + num_points_y))
-    return chamfer
+    return chamfer, min_indexes
+    # return chamfer
+
+
+def IoU(predBBoxes, gtBBoxes):
+    """
+    :param predBBoxes: (xmin, ymin, xmax, ymax)
+    :param gtBBoxes: (xmin, ymin, xmax, ymax)
+    :return:
+    """
+    predAreas = (predBBoxes[:, 2] - predBBoxes[:, 0]) * (predBBoxes[:, 3] - predBBoxes[:, 1])
+    gtAreas = (gtBBoxes[:, 2] - gtBBoxes[:, 0]) * (gtBBoxes[:, 3] - gtBBoxes[:, 1])
+
+    # delta_x and delta_y between the preds and gts
+    delta_x1 = predBBoxes[:, 2] - gtBBoxes[:, 0]
+    delta_x2 = gtBBoxes[:, 2] - predBBoxes[:, 0]
+    delta_x = torch.min(delta_x1, delta_x2).clamp(0.0, 100000000.0)
+
+    delta_y1 = predBBoxes[:, 3] - gtBBoxes[:, 1]
+    delta_y2 = gtBBoxes[:, 3] - predBBoxes[:, 1]
+    delta_y = torch.min(delta_y1, delta_y2).clamp(0.0, 100000000.0)
+
+    ovrAreas = delta_x * delta_y
+    unionAreas = predAreas + gtAreas - ovrAreas
+
+    iou_ratio = ovrAreas / unionAreas
+    return iou_ratio
+
+
+def xentropy(pred, gt):
+    return -torch.mean((1 - gt) * torch.log(1 - pred) + gt * torch.log(pred))
