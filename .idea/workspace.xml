@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c31f0a59-344c-40ef-8d48-050212759d40" name="Default" comment="added height predictions">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515036119.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515040885.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515040905.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041035.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041126.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041134.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041154.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041297.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041476.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041571.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041675.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041782.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041818.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515041954.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515042016.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515042063.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515042190.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515042229.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp03/events.out.tfevents.1515042278.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp04_with_height/events.out.tfevents.1515046998.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/logs/exp04_with_height/events.out.tfevents.1515047068.x" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/000900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/001900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/002900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/003900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/004900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/005900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/006900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/007900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/008900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/009900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/010900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/011900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012700.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012800.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/012900.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013000.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013100.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013200.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013300.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013400.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013500.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/outputs/013600.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_000.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_006.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_007.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_008.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_009.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp03/model_010.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp04_with_height/model_000.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp04_with_height/model_001.pth" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/saves/exp04_with_height/model_002.pth" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="skeleton.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/skeleton.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1869">
+              <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="box_utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/box_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3591">
+              <caret line="176" column="23" lean-forward="false" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="patches.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/matplotlib/patches.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="13671">
+              <caret line="675" column="8" lean-forward="false" selection-start-line="675" selection-start-column="8" selection-end-line="675" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resnet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/resnet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="777">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oiltankLoader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/oiltankLoader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2667">
+              <caret line="135" column="74" lean-forward="false" selection-start-line="135" selection-start-column="74" selection-end-line="135" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s01.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scratch/s01.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BasicBlock</find>
+      <find>resnet</find>
+      <find>layers</find>
+      <find>Ken</find>
+      <find>jaccard</find>
+      <find>loader</find>
+      <find>VOCDetection</find>
+      <find>data.</find>
+      <find>root</find>
+      <find>image_set</find>
+      <find>target_transform</find>
+      <find>target_tf</find>
+      <find>print</find>
+      <find>to_</find>
+      <find>pull_image</find>
+      <find>by</find>
+      <find>nms</find>
+      <find>log</find>
+      <find>ds</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Kenyon</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="daf1fcdcc8d5b36bb8a7dbe483f0c3950338feb5" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/skeleton.py" />
+        <option value="$PROJECT_DIR$/models/resnet.py" />
+        <option value="$PROJECT_DIR$/scratch/s02.py" />
+        <option value="$PROJECT_DIR$/scratch/s03_nms.py" />
+        <option value="$PROJECT_DIR$/data/cocoLoader.py" />
+        <option value="$PROJECT_DIR$/scratch/s04_oiltankLoader.py" />
+        <option value="$PROJECT_DIR$/scratch/s01.py" />
+        <option value="$PROJECT_DIR$/data/oiltankLoader.py" />
+        <option value="$PROJECT_DIR$/models/skeleton.py" />
+        <option value="$PROJECT_DIR$/src/train.py" />
+        <option value="$PROJECT_DIR$/util/box_utils.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="334" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="scratch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="saves" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpleDetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpleDetection" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.train">
+    <configuration name="box_utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simpleDetection" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/util/box_utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="s01" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simpleDetection" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch/s01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="s03_nms" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simpleDetection" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch/s03_nms.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="s04_oiltankLoader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scratch" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simpleDetection" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scratch/s04_oiltankLoader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="simpleDetection" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.s01" />
+      <item index="1" class="java.lang.String" itemvalue="Python.box_utils" />
+      <item index="2" class="java.lang.String" itemvalue="Python.s03_nms" />
+      <item index="3" class="java.lang.String" itemvalue="Python.s04_oiltankLoader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.train" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.train" />
+        <item index="1" class="java.lang.String" itemvalue="Python.s04_oiltankLoader" />
+        <item index="2" class="java.lang.String" itemvalue="Python.s03_nms" />
+        <item index="3" class="java.lang.String" itemvalue="Python.box_utils" />
+        <item index="4" class="java.lang.String" itemvalue="Python.s01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c31f0a59-344c-40ef-8d48-050212759d40" name="Default" comment="" />
+      <created>1514855989742</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514855989742</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init, WIP">
+      <created>1514888681731</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1514888681731</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init, WIP">
+      <created>1514888952639</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1514888952639</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init, WIP">
+      <created>1514889322120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1514889322120</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init, WIP">
+      <created>1514961077842</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514961077842</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init, WIP">
+      <created>1514961553695</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514961553695</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init, WIP">
+      <created>1514969984006</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1514969984006</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first working edition">
+      <created>1515040473796</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1515040473796</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added height predictions">
+      <created>1515049073593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1515049073593</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added height predictions">
+      <created>1515049232899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1515049232899</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438155" sideWeight="0.50193477" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4350105" sideWeight="0.49806523" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25538972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init, WIP" />
+    <MESSAGE value="first working edition" />
+    <MESSAGE value="added height predictions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added height predictions" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/models/skeleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="94" column="39" lean-forward="false" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/matplotlib/patches.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13671">
+          <caret line="675" column="8" lean-forward="false" selection-start-line="675" selection-start-column="8" selection-end-line="675" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="85" column="44" lean-forward="false" selection-start-line="85" selection-start-column="44" selection-end-line="85" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/oiltankLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2667">
+          <caret line="135" column="74" lean-forward="false" selection-start-line="135" selection-start-column="74" selection-end-line="135" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/box_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2478">
+          <caret line="123" column="20" lean-forward="true" selection-start-line="123" selection-start-column="20" selection-end-line="123" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/skeleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/box_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5187">
+          <caret line="250" column="42" lean-forward="false" selection-start-line="250" selection-start-column="42" selection-end-line="250" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/skeleton.py" />
+    <entry file="jar://$USER_HOME$/anaconda3/lib/python3.5/site-packages/torchvision-0.1.9-py3.5.egg!/torchvision/models/resnet.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/torch/nn/modules/upsampling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1407">
+          <caret line="72" column="8" lean-forward="false" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="956" column="66" lean-forward="true" selection-start-line="956" selection-start-column="13" selection-end-line="956" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s03_nms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="37" column="37" lean-forward="false" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/645584067/torch/_C/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="4105" column="18" lean-forward="true" selection-start-line="4105" selection-start-column="18" selection-end-line="4105" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/anaconda3/lib/python3.5/site-packages/torchvision-0.2.0-py3.5.egg!/torchvision/datasets/folder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/cocoLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s04_oiltankLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/skeleton.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1869">
+          <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/box_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3591">
+          <caret line="176" column="23" lean-forward="false" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/site-packages/matplotlib/patches.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13671">
+          <caret line="675" column="8" lean-forward="false" selection-start-line="675" selection-start-column="8" selection-end-line="675" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="30" column="61" lean-forward="false" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/resnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/oiltankLoader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2667">
+          <caret line="135" column="74" lean-forward="false" selection-start-line="135" selection-start-column="74" selection-end-line="135" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scratch/s01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
