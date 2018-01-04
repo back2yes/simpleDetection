@@ -14,12 +14,14 @@ from torch import nn
 is_cuda = True
 dataroot = 'C:/Users/x/data/VOCdevkit'
 num_epochs = 100
-lam = 0.2
+lam = 0.01
 lr = 1e-4
-log_dir = 'logs/exp02'
+log_dir = 'logs/exp03'
 writer = SummaryWriter(log_dir=log_dir)
-save_path = 'saves/exp01'
-start_epoch = 26
+save_path = 'saves/exp03'
+if not os.path.isdir(save_path):
+    os.makedirs(save_path)
+start_epoch = 0
 
 ds = OilDataset(dataroot, image_sets=[('2007', 'trainval')])
 dl = DataLoader(ds, batch_size=1)
@@ -39,7 +41,8 @@ criterion = xentropy
 try:
     net.load_state_dict(torch.load(save_path + '/model_{:03d}.pth'.format(start_epoch)))
 except:
-    raise
+    pass
+    # raise
 
 for epoch in range(start_epoch, num_epochs):
     scheduler.step(epoch)
@@ -75,9 +78,11 @@ for epoch in range(start_epoch, num_epochs):
 
         # print(kept_bboxes.size(), corresponding_gtbboxes.size())
         ious = IoU(kept_bboxes, corresponding_gtbboxes)
+        print('ious: ', ious.data.cpu().numpy())
         # print(ious.size())
         # print(kept_scores.size())
         score_loss = criterion(kept_scores, ious)
+        print('kept_scores: ', kept_scores.data.cpu().numpy())
         # print(score_loss)
         # print(chamfer_loss)
 

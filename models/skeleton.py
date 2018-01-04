@@ -37,7 +37,7 @@ class NNSkeleton(nn.Module):
         self.locHead0 = Heads(64, 1)
         self.locHead1 = Heads(64, 1)
         self.locHead2 = Heads(64, 1)
-        self.locHead3 = Heads(128, 1)
+        self.locHead3 = Heads(128, 3)
         self.locHead4 = Heads(256, 1)
         self.locHead5 = Heads(512, 1)
 
@@ -83,10 +83,11 @@ class NNSkeleton(nn.Module):
 
         # xPreds = locPreds3
         # print('xgrid, ', xgrid.size(), 'locPreds, ', locPreds3.size())
-        xmin = xgrid - 0.5 * imgWidth * locPreds3.squeeze()
-        ymin = ygrid - 0.5 * imgHeight * locPreds3.squeeze()
-        xmax = xgrid + 0.5 * imgWidth * locPreds3.squeeze()
-        ymax = ygrid + 0.5 * imgHeight * locPreds3.squeeze()
+        # print(locPreds3.size())
+        xmin = xgrid - 0.5 * imgWidth * locPreds3.squeeze()[2] + 0.5 * imgWidth * locPreds3.squeeze()[0]
+        ymin = ygrid - 0.5 * imgHeight * locPreds3.squeeze()[2] + 0.5 * imgHeight * locPreds3.squeeze()[1]
+        xmax = xgrid + 0.5 * imgWidth * locPreds3.squeeze()[2] + 0.5 * imgWidth * locPreds3.squeeze()[0]
+        ymax = ygrid + 0.5 * imgHeight * locPreds3.squeeze()[2] + 0.5 * imgHeight * locPreds3.squeeze()[1]
 
         bboxes = torch.stack([xmin, ymin, xmax, ymax], dim=-1).view(-1, 4)
         scores = clsPreds3.view(-1)
