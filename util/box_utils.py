@@ -155,7 +155,7 @@ def xentropy(pred, gt):
     return -torch.mean((1 - gt) * torch.log(1 - pred) + gt * torch.log(pred))
 
 
-def draw_boxes(img, bboxes, scores, ax=None, save_path='outputs/00001.png'):
+def draw_boxes(img, bboxes, scores, ax=None, pred_height=None, gt_height=None, save_path='outputs/00001.png'):
     if ax is None:
         plt.figure(0)
         plt.clf()
@@ -164,10 +164,19 @@ def draw_boxes(img, bboxes, scores, ax=None, save_path='outputs/00001.png'):
 
     for ii, bbox in enumerate(bboxes.squeeze().data.cpu().numpy()):
         score = scores.squeeze().data.cpu().numpy()[ii]
+        if pred_height is not None:
+            predH = pred_height.squeeze().data.cpu().numpy()[ii]
+        if gt_height is not None:
+            gtH = gt_height.squeeze().data.cpu().numpy()[ii]
         # print(score)
+        rgba_color = (score, 0.5, (1 - score), 0.7)
         rectangle = mpatch.Rectangle(bbox[:2], bbox[2] - bbox[0], bbox[3] - bbox[1], fill=False,
-                                     color=(score, 0.5, (1 - score), 0.7))
+                                     color=rgba_color)
         ax.add_patch(rectangle)
+
+        if score > 0.4:
+            pred_height_text = ax.text(bbox[0], bbox[1], '{:.3f}'.format(predH), fontsize=8, color=rgba_color)
+            gt_height_text = ax.text(bbox[0], bbox[1] + 16, '{:.3f}'.format(gtH), fontsize=8, color=(0.0, 1.0, 0.0, 0.6))
     # plt.xlim(0.0, 10.0)
     # plt.ylim(0.0, 10.0)
     plt.savefig(save_path)

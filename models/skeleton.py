@@ -49,6 +49,8 @@ class NNSkeleton(nn.Module):
         self.clsHead4 = Heads(256, 1, final_activation=F.sigmoid)
         self.clsHead5 = Heads(512, 1, final_activation=F.sigmoid)
 
+        self.hgtHead3 = Heads(128, 1, final_activation=F.relu)
+
     def forward(self, x):
         # blah
         h_1, h0, h1, h2, h3, h4, h5 = self.fpn(x)
@@ -62,6 +64,7 @@ class NNSkeleton(nn.Module):
         # clsPreds2 = self.clsHead2(h2)  # 56x56
         locPreds3 = self.locHead3(h3)  # 28x28
         clsPreds3 = self.clsHead3(h3)  # 28x28
+        hgtPreds3 = self.hgtHead3(h3)  # 28x28
         # locPreds4 = self.locHead4(h4)  # 14x14
         # clsPreds4 = self.clsHead4(h4)  # 14x14
         # locPreds5 = self.locHead5(h5)  # 7x7
@@ -91,8 +94,9 @@ class NNSkeleton(nn.Module):
 
         bboxes = torch.stack([xmin, ymin, xmax, ymax], dim=-1).view(-1, 4)
         scores = clsPreds3.view(-1)
-        retVals = (bboxes, scores)
-
+        lidHeight = hgtPreds3.view(-1)
+        retVals = (bboxes, lidHeight, scores)
+        # print(bboxes.size(), lidHeight.size())
         # retVals = (xgrid, ygrid, locPreds3, clsPreds3)
 
         # for val in retVals:
