@@ -1,5 +1,8 @@
 import torch
 from torch.autograd import Variable
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatch
 import torch.nn as nn
 
 
@@ -150,3 +153,20 @@ def IoU(predBBoxes, gtBBoxes):
 
 def xentropy(pred, gt):
     return -torch.mean((1 - gt) * torch.log(1 - pred) + gt * torch.log(pred))
+
+
+def draw_boxes(img, bboxes, scores, ax=None, save_path='outputs/00001.png'):
+    if ax is None:
+        plt.figure(0)
+        plt.clf()
+        ax = plt.subplot(1, 1, 1)
+        plt.imshow(img.data.cpu().numpy()[0].transpose((1, 2, 0)))
+
+    for ii, bbox in enumerate(bboxes.squeeze().data.cpu().numpy()):
+        score = scores.squeeze().data.cpu().numpy()[ii]
+        rectangle = mpatch.Rectangle(bbox[:2], bbox[2] - bbox[0], bbox[3] - bbox[1], fill=False,
+                                     )
+        ax.add_patch(rectangle)
+    plt.xlim(0.0, 10.0)
+    plt.ylim(0.0, 10.0)
+    plt.savefig(save_path)

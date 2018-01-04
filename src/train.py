@@ -1,5 +1,5 @@
 import torch
-from util.box_utils import nms, chamferDist, to_var, IoU, xentropy
+from util.box_utils import nms, chamferDist, to_var, IoU, xentropy, draw_boxes
 from data.oiltankLoader import VOCDetection as OilDataset
 from torch.utils.data import DataLoader
 from models.skeleton import NNSkeleton
@@ -8,7 +8,9 @@ from torch import optim
 from tensorboardX import SummaryWriter
 from torch.optim.lr_scheduler import LambdaLR
 import os
+
 from torch import nn
+
 """ Parameters here
 """
 is_cuda = True
@@ -34,7 +36,6 @@ lambda2 = lambda epoch: 0.95 ** epoch
 optimizer = optim.Adam(net.parameters(), lr=lr)
 scheduler = LambdaLR(optimizer, lr_lambda=lambda2)
 
-
 # criterion = nn.
 criterion = xentropy
 
@@ -43,6 +44,10 @@ try:
 except:
     pass
     # raise
+
+
+
+
 
 for epoch in range(start_epoch, num_epochs):
     scheduler.step(epoch)
@@ -98,3 +103,6 @@ for epoch in range(start_epoch, num_epochs):
         optimizer.step()
         # print(kept_bboxes.size())
         # bboxes
+
+        if global_step % 20 == 0:
+            draw_boxes(xs, bboxes, kept_scores, save_path='outputs/{:06d}.png'.format(global_step))
